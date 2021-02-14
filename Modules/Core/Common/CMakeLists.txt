@@ -144,11 +144,6 @@ mark_as_advanced(ITK_TEMPLATE_VISIBILITY_DEFAULT)
 # TBB module name (Module_ITKTBB) for code readability.
 set(ITK_USE_TBB ${Module_ITKTBB})
 
-
-configure_file(src/itkConfigure.h.in itkConfigure.h)
-configure_file(src/itkConfigurePrivate.h.in itkConfigurePrivate.h)
-
-
 set(ITKCommon_INCLUDE_DIRS
   ${ITKCommon_BINARY_DIR}
   )
@@ -161,13 +156,6 @@ itk_module_impl()
 # identified in a way consistent with CMake 3.1.0 and
 # greater
 include(CMake/itkGenerateNewCompilerFeatureDetectionHeaders.cmake)
-
-install(FILES
-  ${ITKCommon_BINARY_DIR}/itkConfigure.h
-  ${CMAKE_CURRENT_BINARY_DIR}/itk_compiler_detection.h
-  DESTINATION ${ITKCommon_INSTALL_INCLUDE_DIR}
-  COMPONENT Development
-)
 
 install(FILES
   ${ITK_compiler_detection_support_headers}
