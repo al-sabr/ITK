@@ -1,5 +1,6 @@
 # Set a list of group names
 set(group_list
+  Basic
   Core
   IO
   Filtering
