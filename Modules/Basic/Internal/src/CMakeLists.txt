@@ -51,6 +51,8 @@ configure_file(itkBuildInformation.cxx.in ${ITKInternal_BINARY_DIR}/itkBuildInfo
 
 set(ITKInternal_SRCS
   ../include/itkMacro.h
+  ../include/itkSimpleFastMutexLock.h
+  itkSimpleFastMutexLock.cxx
   ${ITKInternal_BINARY_DIR}/itkBuildInformation.cxx
   ITKInternalEnums.cxx
   itkTotalProgressReporter.cxx
