@@ -50,6 +50,7 @@ configure_file(itkBuildInformation.cxx.in ${ITKInternal_BINARY_DIR}/itkBuildInfo
                #[NEWLINE_STYLE [UNIX|DOS|WIN32|LF|CRLF] ])
 
 set(ITKInternal_SRCS
+  ../include/itkMacro.h
   ${ITKInternal_BINARY_DIR}/itkBuildInformation.cxx
   ITKInternalEnums.cxx
   itkTotalProgressReporter.cxx
