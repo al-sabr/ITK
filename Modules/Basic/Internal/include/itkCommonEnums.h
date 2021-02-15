@@ -170,17 +170,17 @@ using IOByteOrderType = CommonEnums::IOByteOrder;
 using CellGeometryType = CommonEnums::CellGeometry;
 #endif
 // Define how to print enumeration
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, IOPixelEnum value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, IOComponentEnum value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, IOFileEnum value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, IOFileModeEnum value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, IOByteOrderEnum value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, CellGeometryEnum value);
 
 /** \class MeshEnums
@@ -201,7 +201,7 @@ public:
     CellsAllocatedDynamicallyCellByCell
   };
 };
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, MeshEnums::MeshClassCellsAllocationMethod value);
 /**\class OctreeEnums
  * \brief
@@ -240,9 +240,9 @@ public:
 };
 
 // Define how to print enumeration
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const OctreeEnums::Octree value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const OctreeEnums::LeafIdentifier value);
 /**\class ObjectEnums
  * \ingroup ITKCommon
@@ -260,7 +260,7 @@ public:
   };
 };
 
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const ObjectEnums::RegionEnum value);
 
 /**\class ObjectFactoryEnums
@@ -281,7 +281,7 @@ public:
     INSERT_AT_POSITION
   };
 };
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const ObjectFactoryEnums::InsertionPosition value);
 
 } // namespace itk

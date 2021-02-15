@@ -59,7 +59,7 @@ namespace itk
 class OverRideMap;
 struct ObjectFactoryBasePrivate;
 
-class ITKCommon_EXPORT ObjectFactoryBase : public Object
+class ITKInternal_EXPORT ObjectFactoryBase : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ObjectFactoryBase);

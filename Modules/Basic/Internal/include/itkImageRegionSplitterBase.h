@@ -55,7 +55,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT ImageRegionSplitterBase : public Object
+class ITKInternal_EXPORT ImageRegionSplitterBase : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ImageRegionSplitterBase);

@@ -27,7 +27,7 @@ namespace itk
  *  a set of types.
  */
 
-Vector<double, 3> ITKCommon_EXPORT
+Vector<double, 3> ITKInternal_EXPORT
                   CrossProduct(const Vector<double, 3> & a, const Vector<double, 3> & b)
 {
   Vector<double, 3> c;
@@ -37,7 +37,7 @@ Vector<double, 3> ITKCommon_EXPORT
   return c;
 }
 
-Vector<float, 3> ITKCommon_EXPORT
+Vector<float, 3> ITKInternal_EXPORT
                  CrossProduct(const Vector<float, 3> & a, const Vector<float, 3> & b)
 {
   Vector<float, 3> c;
@@ -47,7 +47,7 @@ Vector<float, 3> ITKCommon_EXPORT
   return c;
 }
 
-Vector<int, 3> ITKCommon_EXPORT
+Vector<int, 3> ITKInternal_EXPORT
                CrossProduct(const Vector<int, 3> & a, const Vector<int, 3> & b)
 {
   Vector<int, 3> c;

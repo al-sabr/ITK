@@ -50,7 +50,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT Win32OutputWindow : public OutputWindow
+class ITKInternal_EXPORT Win32OutputWindow : public OutputWindow
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(Win32OutputWindow);

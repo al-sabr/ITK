@@ -45,7 +45,7 @@ struct OutputWindowGlobals;
  * \ingroup OSSystemObjects
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT OutputWindow : public Object
+class ITKInternal_EXPORT OutputWindow : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(OutputWindow);

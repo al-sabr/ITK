@@ -44,7 +44,7 @@ namespace itk
  */
 struct BuildInformationGlobals;
 
-class ITKCommon_EXPORT BuildInformation final : public Object
+class ITKInternal_EXPORT BuildInformation final : public Object
 {
 public:
   // Using the `rule of zero` to this aggregate type

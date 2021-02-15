@@ -53,7 +53,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT Version : public Object
+class ITKInternal_EXPORT Version : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(Version);

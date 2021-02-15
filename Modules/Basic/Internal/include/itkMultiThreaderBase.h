@@ -80,9 +80,9 @@ public:
   };
 };
 // Define how to print enumeration
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const MultiThreaderBaseEnums::Threader value);
-extern ITKCommon_EXPORT std::ostream &
+extern ITKInternal_EXPORT std::ostream &
                         operator<<(std::ostream & out, const MultiThreaderBaseEnums::ThreadExitCode value);
 
 /** \class MultiThreaderBase
@@ -102,7 +102,7 @@ extern ITKCommon_EXPORT std::ostream &
 struct MultiThreaderBaseGlobals;
 class ProcessObject;
 
-class ITKCommon_EXPORT MultiThreaderBase : public Object
+class ITKInternal_EXPORT MultiThreaderBase : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(MultiThreaderBase);

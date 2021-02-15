@@ -46,7 +46,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT Indent
+class ITKInternal_EXPORT Indent
 {
 public:
   /** Standard class type aliases. */
@@ -79,7 +79,7 @@ public:
   GetNextIndent() const;
 
   /** Print out the indentation. Basically output a bunch of spaces.  */
-  friend ITKCommon_EXPORT std::ostream &
+  friend ITKInternal_EXPORT std::ostream &
                           operator<<(std::ostream & os, const Indent & o);
 
 private:

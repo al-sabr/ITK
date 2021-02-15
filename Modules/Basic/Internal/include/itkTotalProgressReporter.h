@@ -37,7 +37,7 @@ namespace itk
  *
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT TotalProgressReporter
+class ITKInternal_EXPORT TotalProgressReporter
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(TotalProgressReporter);

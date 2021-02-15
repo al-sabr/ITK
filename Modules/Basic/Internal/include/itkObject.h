@@ -59,7 +59,7 @@ class ITK_FORWARD_EXPORT Command;
  * \sphinxexample{Core/Common/CreateAnother,Copy Another}
  * \endsphinx
  */
-class ITKCommon_EXPORT Object : public LightObject
+class ITKInternal_EXPORT Object : public LightObject
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(Object);

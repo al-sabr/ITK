@@ -54,7 +54,7 @@ namespace itk
  * \ingroup ITKSystemObjects
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT EventObject
+class ITKInternal_EXPORT EventObject
 {
 public:
   /** Constructor and copy constructor.  Note that these functions will be
@@ -112,7 +112,7 @@ operator<<(std::ostream & os, const EventObject & e)
 }
 
 
-#define ITKEvent_EXPORT ITKCommon_EXPORT
+#define ITKEvent_EXPORT ITKInternal_EXPORT
 
 /**
  *  Macros for creating new Events

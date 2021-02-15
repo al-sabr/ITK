@@ -56,7 +56,7 @@ namespace itk
  * \sphinx{Core/Common/GetNameOfClass, Get Name Of Class}
  * \endsphinx
  */
-class ITKCommon_EXPORT LightObject
+class ITKInternal_EXPORT LightObject
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(LightObject);
@@ -169,7 +169,7 @@ protected:
  * PrintSelf method that all objects should define, if they have anything
  * interesting to print out.
  */
-ITKCommon_EXPORT std::ostream &
+ITKInternal_EXPORT std::ostream &
                  operator<<(std::ostream & os, const LightObject & o);
 
 } // end namespace itk

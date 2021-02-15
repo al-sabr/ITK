@@ -42,7 +42,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT RealTimeInterval
+class ITKInternal_EXPORT RealTimeInterval
 {
 public:
   using Self = RealTimeInterval;
@@ -106,7 +106,7 @@ public:
   void Set(SecondsDifferenceType, MicroSecondsDifferenceType);
 
   /** Default print out of a RealTimeInterval */
-  friend ITKCommon_EXPORT std::ostream &
+  friend ITKInternal_EXPORT std::ostream &
                           operator<<(std::ostream & os, const RealTimeInterval & v);
 
 private:

@@ -50,7 +50,7 @@ namespace itk
  * \sphinxexample{Core/Common/StoreNonPixelDataInImage,Store Non-Pixel Data In Image}
  * \endsphinx
  */
-class ITKCommon_EXPORT MetaDataDictionary
+class ITKInternal_EXPORT MetaDataDictionary
 {
 public:
   using Self = MetaDataDictionary;

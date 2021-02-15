@@ -135,7 +135,7 @@ class MultiThreaderBase;
  *
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT ProcessObject : public Object
+class ITKInternal_EXPORT ProcessObject : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(ProcessObject);

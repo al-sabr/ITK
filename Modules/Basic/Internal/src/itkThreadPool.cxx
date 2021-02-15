@@ -36,7 +36,7 @@ struct ThreadPoolGlobals
   // To lock on the internal variables.
   std::mutex          m_Mutex;
   ThreadPool::Pointer m_ThreadPoolInstance;
-#if defined(_WIN32) && defined(ITKCommon_EXPORTS)
+#if defined(_WIN32) && defined(ITKInternal_EXPORTS)
   // ThreadPool's destructor is called during DllMain's DLL_PROCESS_DETACH.
   // Because ITKCommon-5.X.dll is usually being detached due to process termination,
   // lpvReserved is non-NULL meaning that "all threads in the process

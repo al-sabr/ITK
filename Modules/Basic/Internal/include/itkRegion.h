@@ -62,7 +62,7 @@ namespace itk
  * \ingroup DataRepresentation
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT Region
+class ITKInternal_EXPORT Region
 {
 public:
   /** Standard class type aliases. */

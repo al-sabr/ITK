@@ -409,19 +409,19 @@ namespace itk
  * OutputWindow::GetInstance()->DisplayText();
  * This is to avoid Object \#include of OutputWindow
  * while OutputWindow \#includes Object. */
-extern ITKCommon_EXPORT void
+extern ITKInternal_EXPORT void
 OutputWindowDisplayText(const char *);
 
-extern ITKCommon_EXPORT void
+extern ITKInternal_EXPORT void
 OutputWindowDisplayErrorText(const char *);
 
-extern ITKCommon_EXPORT void
+extern ITKInternal_EXPORT void
 OutputWindowDisplayWarningText(const char *);
 
-extern ITKCommon_EXPORT void
+extern ITKInternal_EXPORT void
 OutputWindowDisplayGenericOutputText(const char *);
 
-extern ITKCommon_EXPORT void
+extern ITKInternal_EXPORT void
 OutputWindowDisplayDebugText(const char *);
 } // end namespace itk
 

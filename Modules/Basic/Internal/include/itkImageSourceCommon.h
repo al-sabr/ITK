@@ -36,7 +36,7 @@ namespace itk
  *
  * \ingroup ITKCommon
  */
-struct ITKCommon_EXPORT ImageSourceCommon
+struct ITKInternal_EXPORT ImageSourceCommon
 {
   /**
    * Provide access to a common static object for image region splitting

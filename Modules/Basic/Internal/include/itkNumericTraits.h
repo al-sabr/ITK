@@ -87,10 +87,10 @@ public:
   using ScalarRealType = RealType;
 
   /** Additive identity. */
-  static const T ITKCommon_EXPORT Zero;
+  static const T ITKInternal_EXPORT Zero;
 
   /** Multiplicative identity. */
-  static const T ITKCommon_EXPORT One;
+  static const T ITKInternal_EXPORT One;
 
   /** Smallest (most nonpositive) value */
   static constexpr T
@@ -267,8 +267,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr bool ITKCommon_EXPORT Zero = false;
-  static constexpr bool ITKCommon_EXPORT One = true;
+  static constexpr bool ITKInternal_EXPORT Zero = false;
+  static constexpr bool ITKInternal_EXPORT One = true;
 
   static constexpr bool
   min()
@@ -389,8 +389,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr char ITKCommon_EXPORT Zero = 0;
-  static constexpr char ITKCommon_EXPORT One = 1;
+  static constexpr char ITKInternal_EXPORT Zero = 0;
+  static constexpr char ITKInternal_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
 
@@ -495,8 +495,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr signed char ITKCommon_EXPORT Zero = 0;
-  static constexpr signed char ITKCommon_EXPORT One = 1;
+  static constexpr signed char ITKInternal_EXPORT Zero = 0;
+  static constexpr signed char ITKInternal_EXPORT One = 1;
 
   static constexpr signed char
   min()
@@ -617,8 +617,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr unsigned char ITKCommon_EXPORT Zero = 0;
-  static constexpr unsigned char ITKCommon_EXPORT One = 1;
+  static constexpr unsigned char ITKInternal_EXPORT Zero = 0;
+  static constexpr unsigned char ITKInternal_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
 
@@ -720,8 +720,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr short ITKCommon_EXPORT Zero = 0;
-  static constexpr short ITKCommon_EXPORT One = 1;
+  static constexpr short ITKInternal_EXPORT Zero = 0;
+  static constexpr short ITKInternal_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr short
@@ -823,8 +823,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr unsigned short ITKCommon_EXPORT Zero = 0;
-  static constexpr unsigned short ITKCommon_EXPORT One = 1;
+  static constexpr unsigned short ITKInternal_EXPORT Zero = 0;
+  static constexpr unsigned short ITKInternal_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr unsigned short
@@ -925,8 +925,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr int ITKCommon_EXPORT Zero = 0;
-  static constexpr int ITKCommon_EXPORT One = 1;
+  static constexpr int ITKInternal_EXPORT Zero = 0;
+  static constexpr int ITKInternal_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr int
@@ -1028,8 +1028,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr unsigned int ITKCommon_EXPORT Zero = 0;
-  static constexpr unsigned int ITKCommon_EXPORT One = 1;
+  static constexpr unsigned int ITKInternal_EXPORT Zero = 0;
+  static constexpr unsigned int ITKInternal_EXPORT One = 1;
 
   static constexpr unsigned int
   min()
@@ -1150,8 +1150,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr long ITKCommon_EXPORT Zero = 0L;
-  static constexpr long ITKCommon_EXPORT One = 1L;
+  static constexpr long ITKInternal_EXPORT Zero = 0L;
+  static constexpr long ITKInternal_EXPORT One = 1L;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr long
@@ -1253,8 +1253,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr unsigned long ITKCommon_EXPORT Zero = 0UL;
-  static constexpr unsigned long ITKCommon_EXPORT One = 1UL;
+  static constexpr unsigned long ITKInternal_EXPORT Zero = 0UL;
+  static constexpr unsigned long ITKInternal_EXPORT One = 1UL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr unsigned long
@@ -1357,8 +1357,8 @@ public:
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
 
-  static constexpr float ITKCommon_EXPORT Zero = 0.0f;
-  static constexpr float ITKCommon_EXPORT One = 1.0f;
+  static constexpr float ITKInternal_EXPORT Zero = 0.0f;
+  static constexpr float ITKInternal_EXPORT One = 1.0f;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr float
@@ -1460,8 +1460,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr double ITKCommon_EXPORT Zero = 0.0;
-  static constexpr double ITKCommon_EXPORT One = 1.0;
+  static constexpr double ITKInternal_EXPORT Zero = 0.0;
+  static constexpr double ITKInternal_EXPORT One = 1.0;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr double
@@ -1571,8 +1571,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr long double ITKCommon_EXPORT Zero = 0.0;
-  static constexpr long double ITKCommon_EXPORT One = 1.0;
+  static constexpr long double ITKInternal_EXPORT Zero = 0.0;
+  static constexpr long double ITKInternal_EXPORT One = 1.0;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr long double
@@ -1675,8 +1675,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr ValueType ITKCommon_EXPORT Zero = 0LL;
-  static constexpr ValueType ITKCommon_EXPORT One = 1LL;
+  static constexpr ValueType ITKInternal_EXPORT Zero = 0LL;
+  static constexpr ValueType ITKInternal_EXPORT One = 1LL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr ValueType
@@ -1778,8 +1778,8 @@ public:
   using FloatType = float;
   using MeasurementVectorType = FixedArray<ValueType, 1>;
 
-  static constexpr ValueType ITKCommon_EXPORT Zero = 0ULL;
-  static constexpr ValueType ITKCommon_EXPORT One = 1ULL;
+  static constexpr ValueType ITKInternal_EXPORT Zero = 0ULL;
+  static constexpr ValueType ITKInternal_EXPORT One = 1ULL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static constexpr ValueType
@@ -1877,8 +1877,8 @@ public:
   using FloatType = std::complex<float>;
   using MeasurementVectorType = FixedArray<ValueType, 2>;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKInternal_EXPORT Zero;
+  static const Self ITKInternal_EXPORT One;
 
   static constexpr Self
   min()

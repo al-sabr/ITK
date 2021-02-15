@@ -42,7 +42,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT SingletonIndex
+class ITKInternal_EXPORT SingletonIndex
 {
 public:
   /** Standard class types. */

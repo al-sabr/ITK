@@ -44,7 +44,7 @@ namespace itk
  * \author Hans J. Johnson
  * \ingroup ITKCommon
  */
-class ITKCommon_EXPORT MetaDataObjectBase : public LightObject
+class ITKInternal_EXPORT MetaDataObjectBase : public LightObject
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(MetaDataObjectBase);
