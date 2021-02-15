@@ -21,7 +21,7 @@
 #include "itkInPlaceImageFilter.h"
 #include "itkSmartPointer.h"
 #include "itkExtractImageFilterRegionCopier.h"
-#include "ITKCommonExport.h"
+#include "ITKInternalExport.h"
 
 namespace itk
 {

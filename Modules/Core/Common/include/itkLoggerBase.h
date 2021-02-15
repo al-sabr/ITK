@@ -20,7 +20,7 @@
 
 #include "itkMultipleLogOutput.h"
 #include "itkRealTimeClock.h"
-#include "ITKCommonExport.h"
+#include "ITKInternalExport.h"
 #ifdef DEBUG
 #  undef DEBUG // HDF5 publicly exports this define when built in debug mode
 // That messes up the DEBUG enumeration in PriorityLevelEnum.

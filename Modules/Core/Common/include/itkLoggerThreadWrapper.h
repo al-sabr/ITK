@@ -24,7 +24,7 @@
 
 #include "itkObjectFactory.h"
 #include <mutex>
-#include "ITKCommonExport.h"
+#include "ITKInternalExport.h"
 
 namespace itk
 {
