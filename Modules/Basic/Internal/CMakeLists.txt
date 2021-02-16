@@ -165,7 +165,7 @@ itk_module_impl()
 set(ITK_SOURCE_DIR ${BACKUP} PARENT_SCOPE)
 unset(BACKUP)
 
-set(exports "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
+set(exports "${${PROJECT_NAME}_BINARY_DIR}/include/${PROJECT_NAME}Export.h")
 
 # Generate the export macro header for symbol visibility/Windows DLL declspec
 generate_export_header(${itk-module}
@@ -179,7 +179,8 @@ generate_export_header(${itk-module}
   COMPONENT Development
 )
 
-target_include_directories(${itk-module} "${${itk-module}_BINARY_DIR}/include")
+message("ARGHHH = ${${PROJECT_NAME}_BINARY_DIR}/include")
+target_include_directories(${PROJECT_NAME} "${${PROJECT_NAME}_BINARY_DIR}/include")
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
 # identified in a way consistent with CMake 3.1.0 and
