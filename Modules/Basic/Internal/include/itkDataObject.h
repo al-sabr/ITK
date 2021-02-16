@@ -287,7 +287,7 @@ protected:
  * \ingroup ITKSystemObjects
  * \ingroup ITKCommon
  */
-class ITK_FORCE_EXPORT_MACRO(ITKCommon) DataObject : public Object
+class ITK_FORCE_EXPORT_MACRO(ITKInternal) DataObject : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(DataObject);
