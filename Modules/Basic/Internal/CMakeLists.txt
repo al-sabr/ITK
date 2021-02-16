@@ -179,6 +179,7 @@ generate_export_header(${itk-module}
   COMPONENT Development
 )
 
+target_include_directories(${itk-module} "${${itk-module}_BINARY_DIR}/include")
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
 # identified in a way consistent with CMake 3.1.0 and
