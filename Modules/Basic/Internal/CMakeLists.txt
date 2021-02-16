@@ -155,7 +155,15 @@ set(ITKInternal_INCLUDE_DIRS
   )
 set(ITKInternal_LIBRARIES ITKInternal)
 
+set(BACKUP ${ITK_SOURCE_DIR})
+
+unset(ITK_SOURCE_DIR PARENT_SCOPE)
+
 itk_module_impl()
+
+
+set(ITK_SOURCE_DIR ${BACKUP} PARENT_SCOPE)
+unset(BACKUP)
 
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
