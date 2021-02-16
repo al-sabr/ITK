@@ -54,7 +54,7 @@ set(ITKInternal_SRCS
   ../include/itkSimpleFastMutexLock.h
   itkSimpleFastMutexLock.cxx
   ${ITKInternal_BINARY_DIR}/itkBuildInformation.cxx
-  ITKInternalEnums.cxx
+  itkCommonEnums.cxx
   itkTotalProgressReporter.cxx
   itkNumericTraits.cxx
   itkIndent.cxx
@@ -81,7 +81,7 @@ set(ITKInternal_SRCS
   itkExceptionObject.cxx
   itkVector.cxx
   itkRealTimeStamp.cxx
-  itkDirectory.cx
+  itkDirectory.cxx
   itkTimeStamp.cxx
   itkSingleton.cxx
   itkObjectFactoryBase.cxx
