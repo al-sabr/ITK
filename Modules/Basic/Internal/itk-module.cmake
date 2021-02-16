@@ -2,6 +2,10 @@ set(DOCUMENTATION "This module contains the central classes of the with KWSys & 
 it can be used by external project without having the need to go through the ITKCommon
 module compilation.")
 
+set(BACKUP ${ITK_SOURCE_DIR})
+message("BACKUP = ${BACKUP}")
+set(ITK_MODULE_${itk-module}_ENABLE_SHARED TRUE)
+
 itk_module(ITKInternal
   ENABLE_SHARED
   DEPENDS
@@ -16,6 +20,8 @@ itk_module(ITKInternal
   DESCRIPTION
     "${DOCUMENTATION}"
 )
+
+set(ITK_SOURCE_DIR ${BACKUP})
 
 # Extra test dependency on ITKMesh is introduced by itkCellInterfaceTest.
 # Extra test dependency on ITKImageIntensity is introduced by itkImageDuplicatorTest.
