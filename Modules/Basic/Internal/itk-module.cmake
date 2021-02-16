@@ -3,8 +3,7 @@ it can be used by external project without having the need to go through the ITK
 module compilation.")
 
 set(BACKUP ${ITK_SOURCE_DIR})
-message("BACKUP = ${BACKUP}")
-set(ITK_MODULE_${itk-module}_ENABLE_SHARED TRUE)
+unset(ITK_SOURCE_DIR)
 
 itk_module(ITKInternal
   ENABLE_SHARED
@@ -21,7 +20,10 @@ itk_module(ITKInternal
     "${DOCUMENTATION}"
 )
 
+set(ITK_MODULE_${itk-module}_ENABLE_SHARED TRUE)
+
 set(ITK_SOURCE_DIR ${BACKUP})
+unset(BACKUP)
 
 # Extra test dependency on ITKMesh is introduced by itkCellInterfaceTest.
 # Extra test dependency on ITKImageIntensity is introduced by itkImageDuplicatorTest.
