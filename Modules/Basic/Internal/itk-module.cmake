@@ -3,7 +3,8 @@ it can be used by external project without having the need to go through the ITK
 module compilation.")
 
 set(BACKUP ${ITK_SOURCE_DIR})
-unset(ITK_SOURCE_DIR)
+
+unset(ITK_SOURCE_DIR PARENT_SCOPE)
 
 itk_module(ITKInternal
   ENABLE_SHARED
@@ -20,9 +21,7 @@ itk_module(ITKInternal
     "${DOCUMENTATION}"
 )
 
-set(ITK_MODULE_${itk-module}_ENABLE_SHARED TRUE)
-
-set(ITK_SOURCE_DIR ${BACKUP})
+set(ITK_SOURCE_DIR ${BACKUP} PARENT_SCOPE)
 unset(BACKUP)
 
 # Extra test dependency on ITKMesh is introduced by itkCellInterfaceTest.
