@@ -40,7 +40,7 @@
 
 #include "itkWin32Header.h"
 #include "itkConfigure.h"
-#include "itkInternalExport.h"
+#include "ITKInternalExport.h"
 
 #include <typeinfo>
 
