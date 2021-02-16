@@ -157,9 +157,11 @@ set(ITKInternal_LIBRARIES ITKInternal)
 
 set(BACKUP ${ITK_SOURCE_DIR})
 
+itk_module_impl(BYPASS TRUE)
+#[[
 unset(ITK_SOURCE_DIR PARENT_SCOPE)
 
-itk_module_impl()
+
 
 
 set(ITK_SOURCE_DIR ${BACKUP} PARENT_SCOPE)
@@ -181,6 +183,8 @@ generate_export_header(${itk-module}
 
 message("ARGHHH = ${exports}")
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
+
+]]
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
 # identified in a way consistent with CMake 3.1.0 and
