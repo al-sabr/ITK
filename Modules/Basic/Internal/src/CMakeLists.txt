@@ -55,6 +55,7 @@ set(ITKInternal_SRCS
   itkSimpleFastMutexLock.cxx
   ${ITKInternal_BINARY_DIR}/itkBuildInformation.cxx
   itkCommonEnums.cxx
+  itkImageIORegion.cxx
   itkTotalProgressReporter.cxx
   itkNumericTraits.cxx
   itkIndent.cxx

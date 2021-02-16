@@ -40,7 +40,7 @@ using LibHandle = itksys::DynamicLoader::LibraryHandle;
 using SymbolPointer = itksys::DynamicLoader::SymbolPointer;
 // ETX
 
-class ITKCommon_EXPORT DynamicLoader : public Object
+class ITKInternal_EXPORT DynamicLoader : public Object
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(DynamicLoader);

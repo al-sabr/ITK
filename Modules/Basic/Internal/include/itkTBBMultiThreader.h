@@ -35,7 +35,7 @@ namespace itk
  * \ingroup ITKCommon
  */
 
-class ITKCommon_EXPORT TBBMultiThreader : public MultiThreaderBase
+class ITKInternal_EXPORT TBBMultiThreader : public MultiThreaderBase
 {
 public:
   ITK_DISALLOW_COPY_AND_MOVE(TBBMultiThreader);

@@ -25,12 +25,12 @@
 namespace itk
 {
 
-void ITKCommon_EXPORT
+void ITKInternal_EXPORT
      CompensatedSummationAddElement(float & compensation, float & sum, const float & element)
 {
   CompensatedSummationAddElement(compensation, sum, element, 1);
 }
-void ITKCommon_EXPORT
+void ITKInternal_EXPORT
      CompensatedSummationAddElement(double & compensation, double & sum, const double & element)
 {
   CompensatedSummationAddElement(compensation, sum, element, 1);
