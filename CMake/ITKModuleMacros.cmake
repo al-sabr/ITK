@@ -134,17 +134,15 @@ endmacro()
 macro(itk_module_impl)
   # ARGN is not a variable: assign its value to a variable
   set(ExtraMacroArgs ${ARGN})
-  message("ExtraMacroArgs =  ${ExtraMacroArgs}")
+
   # Get the length of the list
   list(LENGTH ExtraMacroArgs NumExtraMacroArgs)
-  message("NumExtraMacroArgs = ${NumExtraMacroArgs}")
+
   # Execute the following block only if the length is > 0
   if(NumExtraMacroArgs GREATER 0)
     foreach(ExtraArg ${ExtraMacroArgs})
-      message("ExtraArg = ${ExtraArg}")
       if(ExtraArg MATCHES "BYPASS_OWNERSHIP")
         set(BYPASS_OWNERSHIP TRUE)
-        message("BYPASS POSITIVE")
       endif()
     endforeach()
   endif()
@@ -239,7 +237,6 @@ macro(itk_module_impl)
       else()
         set(_export_header_file "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
       endif()
-      message("EXPORT HEADER FILE : ${_export_header_file}")
       # Generate the export macro header for symbol visibility/Windows DLL declspec
       generate_export_header(${itk-module}
         EXPORT_FILE_NAME ${_export_header_file}
