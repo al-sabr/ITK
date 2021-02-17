@@ -148,7 +148,7 @@ macro(itk_module_impl)
       endif()
     endforeach()
   endif()
-  
+
   include(itk-module.cmake) # Load module meta-data
   set(${itk-module}_INSTALL_RUNTIME_DIR ${ITK_INSTALL_RUNTIME_DIR})
   set(${itk-module}_INSTALL_LIBRARY_DIR ${ITK_INSTALL_LIBRARY_DIR})
@@ -239,7 +239,7 @@ macro(itk_module_impl)
       else()
         set(_export_header_file "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
       endif()
-
+      message("EXPORT HEADER FILE : ${_export_header_file}")
       # Generate the export macro header for symbol visibility/Windows DLL declspec
       generate_export_header(${itk-module}
         EXPORT_FILE_NAME ${_export_header_file}
