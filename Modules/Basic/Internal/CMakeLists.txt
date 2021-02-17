@@ -157,7 +157,7 @@ set(ITKInternal_LIBRARIES ITKInternal)
 
 set(BACKUP ${ITK_SOURCE_DIR})
 
-itk_module_impl(BYPASS TRUE)
+itk_module_impl(BYPASS_OWNERSHIP)
 #[[
 unset(ITK_SOURCE_DIR PARENT_SCOPE)
 

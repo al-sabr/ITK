@@ -134,20 +134,21 @@ endmacro()
 macro(itk_module_impl)
   # ARGN is not a variable: assign its value to a variable
   set(ExtraMacroArgs ${ARGN})
-
+  message("ExtraMacroArgs =  ${ExtraMacroArgs}")
   # Get the length of the list
   list(LENGTH ExtraMacroArgs NumExtraMacroArgs)
-
+  message("NumExtraMacroArgs = ${NumExtraMacroArgs}")
   # Execute the following block only if the length is > 0
-  if(NumExtraMacroArgs EQUAL 1)
+  if(NumExtraMacroArgs GREATER 0)
     foreach(ExtraArg ${ExtraMacroArgs})
       message("ExtraArg = ${ExtraArg}")
-      if(ExtraArg MATCHES "BYPASS")
-        set(BYPASS TRUE)
+      if(ExtraArg MATCHES "BYPASS_OWNERSHIP")
+        set(BYPASS_OWNERSHIP TRUE)
         message("BYPASS POSITIVE")
       endif()
     endforeach()
   endif()
+  
   include(itk-module.cmake) # Load module meta-data
   set(${itk-module}_INSTALL_RUNTIME_DIR ${ITK_INSTALL_RUNTIME_DIR})
   set(${itk-module}_INSTALL_LIBRARY_DIR ${ITK_INSTALL_LIBRARY_DIR})
@@ -233,7 +234,7 @@ macro(itk_module_impl)
     # Target ${itk-module} may not exist if the module only contains header files
   if(TARGET ${itk-module})
     if( ITK_MODULE_${itk-module}_ENABLE_SHARED )
-      if(ITK_SOURCE_DIR AND NOT DEFINED BYPASS)
+      if(ITK_SOURCE_DIR AND NOT DEFINED BYPASS_OWNERSHIP)
         set(_export_header_file "${ITKCommon_BINARY_DIR}/${itk-module}Export.h")
       else()
         set(_export_header_file "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
