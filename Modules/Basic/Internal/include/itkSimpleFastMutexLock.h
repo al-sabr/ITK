@@ -30,7 +30,8 @@
 
 #include "itkMacro.h"
 #include "itkThreadSupport.h"
-//#include "include/ITKInternalExport.h"
+#include "include/ITKInternalExport.h"
+
 
 namespace itk
 {
