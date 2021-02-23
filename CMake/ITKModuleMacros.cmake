@@ -131,6 +131,24 @@ macro(itk_module_check_name _name)
 endmacro()
 
 macro(itk_module_impl)
+  # ARGN is not a variable: assign its value to a variable
+  set(ExtraMacroArgs ${ARGN})
+
+  # Get the length of the list
+  list(LENGTH ExtraMacroArgs NumExtraMacroArgs)
+
+  # Execute the following block only if the length is > 0
+  if(NumExtraMacroArgs GREATER 0)
+    foreach(ExtraArg ${ExtraMacroArgs})
+      if(ExtraArg MATCHES "BYPASS_OWNERSHIP")
+        set(BYPASS_OWNERSHIP TRUE)
+      endif()
+      if(ExtraArg MATCHES "GENERATE_EXPORTS_MODULE_ROOT")
+        set(GENERATE_EXPORTS_MODULE_ROOT TRUE)
+      endif()
+    endforeach()
+  endif()
+
   include(itk-module.cmake) # Load module meta-data
   set(${itk-module}_INSTALL_RUNTIME_DIR ${ITK_INSTALL_RUNTIME_DIR})
   set(${itk-module}_INSTALL_LIBRARY_DIR ${ITK_INSTALL_LIBRARY_DIR})
@@ -215,10 +233,14 @@ macro(itk_module_impl)
     # Target ${itk-module} may not exist if the module only contains header files
   if(TARGET ${itk-module})
     if( ITK_MODULE_${itk-module}_ENABLE_SHARED )
-      if(ITK_SOURCE_DIR)
+      if(ITK_SOURCE_DIR AND NOT DEFINED BYPASS_OWNERSHIP)
         set(_export_header_file "${ITKCommon_BINARY_DIR}/${itk-module}Export.h")
       else()
-        set(_export_header_file "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
+        if(GENERATE_EXPORTS_MODULE_ROOT)
+          set(_export_header_file "${${itk-module}_BINARY_DIR}/${itk-module}Export.h")
+        else()
+          set(_export_header_file "${${itk-module}_BINARY_DIR}/include/${itk-module}Export.h")
+        endif()
       endif()
 
       # Generate the export macro header for symbol visibility/Windows DLL declspec
@@ -245,7 +267,7 @@ macro(itk_module_impl)
 
   set(itk-module-EXPORT_CODE-build "${${itk-module}_EXPORT_CODE_BUILD}")
   set(itk-module-EXPORT_CODE-install "${${itk-module}_EXPORT_CODE_INSTALL}")
-  if(ITK_SOURCE_DIR)
+  if(ITK_SOURCE_DIR AND NOT DEFINED BYPASS_OWNERSHIP)
     # Uses ITKTargets.cmake
     set(itk-module-TARGETS_FILE-build "")
     set(itk-module-TARGETS_FILE-install "")

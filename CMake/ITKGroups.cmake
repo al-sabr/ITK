@@ -1,5 +1,6 @@
 # Set a list of group names
 set(group_list
+  Foundation
   Core
   IO
   Filtering
@@ -13,6 +14,8 @@ set(group_list
   Compatibility
   Remote
   )
+
+set(Foundation_documentation "This group of modules contain simple compilation with KWSys & VXL")
 
 set(Core_documentation "This group of modules contain the toolkit framework used
 by other modules.  There are common base classes for data objects and process
