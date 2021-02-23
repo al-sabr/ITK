@@ -40,7 +40,7 @@ namespace itk
  * you're best off using std::vector<>.
  *
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{Utilities/FixedArray,C-style array}
@@ -72,7 +72,7 @@ public:
 
   /** \class ReverseIterator
    * \brief A reverse iterator through an array.
-   * \ingroup ITKCommon
+   * \ingroup ITKFoundationCommon
    */
   class ReverseIterator
   {
@@ -94,7 +94,7 @@ public:
 
   /** \class ConstReverseIterator
    * \brief A const reverse iterator through an array.
-   * \ingroup ITKCommon
+   * \ingroup ITKFoundationCommon
    */
   class ConstReverseIterator
   {

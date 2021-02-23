@@ -50,13 +50,13 @@ class ITK_FORWARD_EXPORT Command;
  *
  * \ingroup ITKSystemObjects
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{Utilities/CreateAnother,Copy a filter}
  * \endwiki
  */
-class ITKCommon_EXPORT Object:public LightObject
+class ITKFoundationCommon_EXPORT Object:public LightObject
 {
 public:
   /** Smart pointer typedef support. */

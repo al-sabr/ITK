@@ -46,10 +46,10 @@ namespace itk
  * \sa Index
  * \sa Size
  * \sa MeshRegion
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT ImageIORegion:public Region
+class ITKFoundationCommon_EXPORT ImageIORegion:public Region
 {
 public:
   /** Standard class typedefs. */
@@ -162,13 +162,13 @@ private:
 
 
 // Declare operator<<
-extern ITKCommon_EXPORT std::ostream & operator<<(std::ostream & os, const ImageIORegion & region);
+extern ITKFoundationCommon_EXPORT std::ostream & operator<<(std::ostream & os, const ImageIORegion & region);
 
 
 /** \class ImageIORegionAdaptor
  * \brief Helper class for converting ImageRegions into ImageIORegions and back.
  *
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< unsigned int VDimension >
 class ImageIORegionAdaptor

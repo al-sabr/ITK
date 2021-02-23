@@ -39,10 +39,10 @@ namespace itk
  * \sa RealTimeStamp
  * \sa RealTimeClock
  *
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT RealTimeInterval
+class ITKFoundationCommon_EXPORT RealTimeInterval
 {
 public:
 
@@ -91,7 +91,7 @@ public:
   void Set( SecondsDifferenceType, MicroSecondsDifferenceType );
 
   /** Default print out of a RealTimeInterval */
-  friend ITKCommon_EXPORT std::ostream & operator<<(std::ostream & os, const RealTimeInterval & v);
+  friend ITKFoundationCommon_EXPORT std::ostream & operator<<(std::ostream & os, const RealTimeInterval & v);
 
 private:
 

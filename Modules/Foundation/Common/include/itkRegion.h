@@ -59,9 +59,9 @@ namespace itk
  * \sa ImageRegion
  * \sa MeshRegion
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT Region
+class ITKFoundationCommon_EXPORT Region
 {
 public:
   /** Standard class typedefs. */

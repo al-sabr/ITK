@@ -46,9 +46,9 @@ namespace itk
  * itkExceptionMacro (found in Common/itkMacro.h) can be used.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT ExceptionObject:public std::exception
+class ITKFoundationCommon_EXPORT ExceptionObject:public std::exception
 {
 public:
   typedef std::exception Superclass;
@@ -129,7 +129,7 @@ private:
    *  and ExceptionData, and overloads the Register()/UnRegister() methods to
    *  delegate them to its second parent, the LightObject.
    *
-   * \ingroup ITKCommon
+   * \ingroup ITKFoundationCommon
    */
   class ReferenceCounterInterface
   {
@@ -161,9 +161,9 @@ inline std::ostream & operator<<(std::ostream & os, ExceptionObject & e)
 /** \class MemoryAllocationError
  * Exception thrown when image memory allocation fails.
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT MemoryAllocationError:public ExceptionObject
+class ITKFoundationCommon_EXPORT MemoryAllocationError:public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be
@@ -192,9 +192,9 @@ public:
 /** \class RangeError
  * Exception thrown when accessing memory out of range.
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT RangeError:public ExceptionObject
+class ITKFoundationCommon_EXPORT RangeError:public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be
@@ -218,9 +218,9 @@ public:
  * Exception thrown when invalid argument is given to a method
  * or function.
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT InvalidArgumentError:public ExceptionObject
+class ITKFoundationCommon_EXPORT InvalidArgumentError:public ExceptionObject
 {
 public:
   /**
@@ -249,9 +249,9 @@ public:
 /** \class IncompatibleOperandsError
  * Exception thrown when two operands are incompatible.
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT IncompatibleOperandsError:public ExceptionObject
+class ITKFoundationCommon_EXPORT IncompatibleOperandsError:public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be
@@ -274,9 +274,9 @@ public:
 /** \class ProcessAborted
  * Exception thrown when a filter (actually a ProcessObject) has been aborted.
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT ProcessAborted:public ExceptionObject
+class ITKFoundationCommon_EXPORT ProcessAborted:public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be

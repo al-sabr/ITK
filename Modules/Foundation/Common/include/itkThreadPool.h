@@ -56,9 +56,9 @@ namespace itk
  * AddThreads method should be invoked.
  *
  * \ingroup OSSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT ThreadPool : public Object
+class ITKFoundationCommon_EXPORT ThreadPool : public Object
 {
 public:
 

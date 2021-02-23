@@ -52,9 +52,9 @@ namespace itk
  * \sa itk::ExceptionObject
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT EventObject
+class ITKFoundationCommon_EXPORT EventObject
 {
 public:
   /** Constructor and copy constructor.  Note that these functions will be
@@ -105,7 +105,7 @@ inline std::ostream & operator<<(std::ostream & os, EventObject & e)
 }
 
 
-#define ITKEvent_EXPORT ITKCommon_EXPORT
+#define ITKEvent_EXPORT ITKFoundationCommon_EXPORT
 
 /**
  *  Macros for creating new Events

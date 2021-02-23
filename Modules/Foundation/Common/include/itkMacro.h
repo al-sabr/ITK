@@ -393,15 +393,15 @@ namespace itk
  * OutputWindow::GetInstance()->DisplayText();
  * This is to avoid Object \#include of OutputWindow
  * while OutputWindow \#includes Object. */
-extern ITKCommon_EXPORT void OutputWindowDisplayText(const char *);
+extern ITKFoundationCommon_EXPORT void OutputWindowDisplayText(const char *);
 
-extern ITKCommon_EXPORT void OutputWindowDisplayErrorText(const char *);
+extern ITKFoundationCommon_EXPORT void OutputWindowDisplayErrorText(const char *);
 
-extern ITKCommon_EXPORT void OutputWindowDisplayWarningText(const char *);
+extern ITKFoundationCommon_EXPORT void OutputWindowDisplayWarningText(const char *);
 
-extern ITKCommon_EXPORT void OutputWindowDisplayGenericOutputText(const char *);
+extern ITKFoundationCommon_EXPORT void OutputWindowDisplayGenericOutputText(const char *);
 
-extern ITKCommon_EXPORT void OutputWindowDisplayDebugText(const char *);
+extern ITKFoundationCommon_EXPORT void OutputWindowDisplayDebugText(const char *);
 } // end namespace itk
 
 /** This macro is used to print debug (or other information). They are
@@ -835,7 +835,7 @@ TTarget itkDynamicCastInDebugMode(TSource x)
  * may be necessary for static const float initialization
  * and is beneficial in other cases where a value can be constant.
  *
- * \ingroup ITKCommon */
+ * \ingroup ITKFoundationCommon */
 #if defined(__GNUC__) && ((__GNUC__ * 100) + __GNUC_MINOR__ ) < 405 && !defined( __clang__ ) && !defined( __INTEL_COMPILER )
 #  define itkStaticConstMacro(name,type,value) enum { name = value }
 #else
@@ -1269,7 +1269,7 @@ CLANG_PRAGMA_POP                             \
 #define itkGPUKernelClassMacro(kernel)      \
 /**\class kernel                            \
  * Workaround KWstyle bug                   \
- * \ingroup ITKCommon                       \
+ * \ingroup ITKFoundationCommon                       \
  */                                         \
 class kernel                                \
   {                                         \

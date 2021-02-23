@@ -52,10 +52,10 @@ namespace itk
  *
  * \ingroup ITKSystemObjects
  * \ingroup DataProcessing
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT ImageRegionSplitterBase
+class ITKFoundationCommon_EXPORT ImageRegionSplitterBase
   :public Object
 {
 public:

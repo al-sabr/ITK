@@ -51,10 +51,10 @@ namespace itk
  * timestamps a particular source release.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT Version:public Object
+class ITKFoundationCommon_EXPORT Version:public Object
 {
 public:
   /** Standard class typedefs. */

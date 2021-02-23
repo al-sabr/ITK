@@ -39,9 +39,9 @@ namespace itk
  * this object (or subclasses of this object).
  *
  * \ingroup OSSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT OutputWindow:public Object
+class ITKFoundationCommon_EXPORT OutputWindow:public Object
 {
 public:
   /** Standard class typedefs. */

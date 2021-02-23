@@ -33,10 +33,10 @@ namespace itk
  * \ingroup OSSystemObjects
  *
  * See also itksys::Directory
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT Directory:public Object
+class ITKFoundationCommon_EXPORT Directory:public Object
 {
 public:
   /** Standard class typedefs. */

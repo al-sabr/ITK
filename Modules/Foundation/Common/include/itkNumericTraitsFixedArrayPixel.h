@@ -38,7 +38,7 @@ namespace itk
  *
  * \sa NumericTraits
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T, unsigned int D >
 class NumericTraits< FixedArray< T, D > >
@@ -177,17 +177,17 @@ public:
   /** \note: the functions are preferred over the member variables as
    * they are defined for all partial specialization
    */
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 };
 
 // a macro to define and initialize static member variables
 #define itkStaticNumericTraitsGenericArrayMacro(GENERIC_ARRAY, T, D)                                 \
   template< >                                                                                        \
-  ITKCommon_EXPORT const GENERIC_ARRAY< T, D >  NumericTraits< GENERIC_ARRAY< T, D > >::Zero = GENERIC_ARRAY< T, D >( \
+  ITKFoundationCommon_EXPORT const GENERIC_ARRAY< T, D >  NumericTraits< GENERIC_ARRAY< T, D > >::Zero = GENERIC_ARRAY< T, D >( \
     NumericTraits< T >::Zero);                                                                       \
   template< >                                                                                        \
-  ITKCommon_EXPORT const GENERIC_ARRAY< T, D >  NumericTraits< GENERIC_ARRAY< T, D > >::One = GENERIC_ARRAY< T, D >( \
+  ITKFoundationCommon_EXPORT const GENERIC_ARRAY< T, D >  NumericTraits< GENERIC_ARRAY< T, D > >::One = GENERIC_ARRAY< T, D >( \
     NumericTraits< T >::One);
 
 //

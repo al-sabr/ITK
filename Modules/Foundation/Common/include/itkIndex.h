@@ -60,7 +60,7 @@ class ITK_TEMPLATE_EXPORT IndexLexicographicCompare;
  *
  * \ingroup ImageAccess
  * \ingroup ImageObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{SimpleOperations/DistanceBetweenIndices,Distance between two indices}
@@ -344,7 +344,7 @@ namespace Functor
  * This is a comparison functor suitable for storing Index instances
  * in an STL container.  The ordering is total and unique but has
  * little geometric meaning.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< unsigned int VIndexDimension >
 class ITK_TEMPLATE_EXPORT IndexLexicographicCompare

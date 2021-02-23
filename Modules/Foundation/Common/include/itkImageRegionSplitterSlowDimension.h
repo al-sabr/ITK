@@ -40,10 +40,10 @@ namespace itk
  *
  * \ingroup ITKSystemObjects
  * \ingroup DataProcessing
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT ImageRegionSplitterSlowDimension
+class ITKFoundationCommon_EXPORT ImageRegionSplitterSlowDimension
   :public ImageRegionSplitterBase
 {
 public:

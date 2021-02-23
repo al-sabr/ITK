@@ -34,9 +34,9 @@ namespace itk
  * of methods is required for virtual methods or non-private methods
  * for the ImageSource interface.
  *
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-struct ITKCommon_EXPORT ImageSourceCommon
+struct ITKFoundationCommon_EXPORT ImageSourceCommon
 {
   /**
    * Provide access to a common static object for image region splitting

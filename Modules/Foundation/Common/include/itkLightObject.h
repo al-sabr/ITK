@@ -50,9 +50,9 @@ namespace itk
  * \sa Object
  * \ingroup ITKSystemObjects
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT LightObject
+class ITKFoundationCommon_EXPORT LightObject
 {
 public:
   /** Standard class typedefs. */
@@ -149,7 +149,7 @@ private:
  * PrintSelf method that all objects should define, if they have anything
  * interesting to print out.
  */
-ITKCommon_EXPORT std::ostream &
+ITKFoundationCommon_EXPORT std::ostream &
 operator<<(std::ostream & os, const LightObject & o);
 
 } // end namespace itk

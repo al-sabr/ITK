@@ -31,7 +31,7 @@ namespace itk
  * libraries or dll's into a process.
  *
  * \ingroup OSSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
 //BTX
@@ -40,7 +40,7 @@ typedef itksys::DynamicLoader::LibraryHandle LibHandle;
 typedef itksys::DynamicLoader::SymbolPointer SymbolPointer;
 //ETX
 
-class ITKCommon_EXPORT DynamicLoader:public Object
+class ITKFoundationCommon_EXPORT DynamicLoader:public Object
 {
 public:
   /** Standard class typedefs. */

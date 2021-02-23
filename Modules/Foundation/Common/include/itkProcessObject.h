@@ -130,9 +130,9 @@ namespace itk
  * \ingroup ITKSystemObjects
  * \ingroup DataProcessing
  *
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT ProcessObject:public Object
+class ITKFoundationCommon_EXPORT ProcessObject:public Object
 {
 public:
   /** Standard class typedefs. */
@@ -465,7 +465,7 @@ protected:
    * NumberOfThreads defined on the enclosing ProcessObject.
    *
    * \sa DomainThreader
-   * \ingroup ITKCommon
+   * \ingroup ITKFoundationCommon
    */
   template< typename TDomainPartitioner, typename TAssociate >
   class ProcessObjectDomainThreader: public DomainThreader< TDomainPartitioner, TAssociate >

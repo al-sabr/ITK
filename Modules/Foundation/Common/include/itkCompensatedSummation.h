@@ -114,8 +114,8 @@ private:
 #endif // ITK_USE_CONCEPT_CHECKING
 };
 
-void ITKCommon_EXPORT CompensatedSummationAddElement( float& compensation, float& sum, const float& element );
-void ITKCommon_EXPORT CompensatedSummationAddElement( double& compensation, double& sum, const double& element );
+void ITKFoundationCommon_EXPORT CompensatedSummationAddElement( float& compensation, float& sum, const float& element );
+void ITKFoundationCommon_EXPORT CompensatedSummationAddElement( double& compensation, double& sum, const double& element );
 
 } // end namespace itk
 

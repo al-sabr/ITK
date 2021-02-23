@@ -43,9 +43,9 @@ class ITK_FORWARD_EXPORT DataObject;
 
 /** \class DataObjectError
  * \brief Exception object for DataObject exceptions.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT DataObjectError:public ExceptionObject
+class ITKFoundationCommon_EXPORT DataObjectError:public ExceptionObject
 {
 public:
   /** Default constructor.  Needed to ensure the exception object can be
@@ -91,9 +91,9 @@ private:
  *  \brief Exception object for invalid requested region.
  *
  * Exception object for invalid requested region.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT InvalidRequestedRegionError:public DataObjectError
+class ITKFoundationCommon_EXPORT InvalidRequestedRegionError:public DataObjectError
 {
 public:
   /** Default constructor. Needed to ensure the exception object can be copied.
@@ -269,9 +269,9 @@ protected:
  * \sa Mesh
  * \ingroup DataRepresentation
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITK_FORCE_EXPORT_MACRO(ITKCommon) DataObject:public Object
+class ITK_FORCE_EXPORT_MACRO(ITKFoundationCommon) DataObject:public Object
 {
 public:
   /** Standard class typedefs. */

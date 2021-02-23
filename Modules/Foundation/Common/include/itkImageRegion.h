@@ -56,7 +56,7 @@ class ITK_TEMPLATE_EXPORT ImageBase;
  * \sa MeshRegion
  *
  * \ingroup ImageObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{Images/ImageRegion,An object which holds the index (start) and size of a region of an image}

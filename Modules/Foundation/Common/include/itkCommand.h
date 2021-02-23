@@ -33,7 +33,7 @@ namespace itk
  * method is called to run the command.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{Utilities/ObserveEvent,Observe an event}
@@ -41,7 +41,7 @@ namespace itk
  */
 
 // The superclass that all commands should be subclasses of
-class ITKCommon_EXPORT Command:public Object
+class ITKFoundationCommon_EXPORT Command:public Object
 {
 public:
   /** Standard class typedefs. */
@@ -78,7 +78,7 @@ private:
  *  arguments as Execute on Command.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T >
 class ITK_TEMPLATE_EXPORT MemberCommand:public Command
@@ -157,7 +157,7 @@ private:
  *  only and itk::EventObject as argument
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T >
 class ITK_TEMPLATE_EXPORT ReceptorMemberCommand:public Command
@@ -225,7 +225,7 @@ private:
  *  arguments.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T >
 class ITK_TEMPLATE_EXPORT SimpleMemberCommand:public Command
@@ -291,7 +291,7 @@ private:
  *  arguments.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T >
 class ITK_TEMPLATE_EXPORT SimpleConstMemberCommand:public Command
@@ -359,10 +359,10 @@ private:
  *  each time.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT CStyleCommand:public Command
+class ITKFoundationCommon_EXPORT CStyleCommand:public Command
 {
 public:
   /** Typedefs for C-style callbacks. */

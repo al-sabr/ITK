@@ -42,9 +42,9 @@ namespace itk
  * a MetaDataDictionary
  *
  * \author Hans J. Johnson
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT MetaDataObjectBase: public LightObject
+class ITKFoundationCommon_EXPORT MetaDataObjectBase: public LightObject
 {
 public:
   /** Smart pointer typedef support. */

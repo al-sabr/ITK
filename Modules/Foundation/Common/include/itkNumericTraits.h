@@ -68,7 +68,7 @@ template< typename TValue, unsigned int VLength>  class FixedArray;
  * traits include minimum and maximum value; accumulation type; etc.
  *
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{SimpleOperations/NumericTraits,Get some basic information about a type}
@@ -229,7 +229,7 @@ public:
  * \brief Define traits for type bool.
  *
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
 template< >
@@ -287,7 +287,7 @@ public:
 /** \class NumericTraits<char>
  * \brief Define traits for type char.
  * NOTE: char is not guaranteed to be signed. On SGI computers, the default is unsigned
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< char > :public std::numeric_limits< char >
@@ -302,8 +302,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR char ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR char ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR char ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR char ITKFoundationCommon_EXPORT One = 1;
 
   static ITK_CONSTEXPR_FUNC char min() { return char(255) < char(0) ? char(-128) : char(0); }
   static ITK_CONSTEXPR_FUNC char max() { return char(255) < char(0) ? char(127) : char(255); }
@@ -351,7 +351,7 @@ public:
 /** \class NumericTraits<char>
  * \brief Define traits for type char.
  * NOTE: char is not guaranteed to be signed. On SGI computers, the default is unsigned
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< signed char > :public std::numeric_limits< signed char >
@@ -366,8 +366,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR signed char ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR signed char ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR signed char ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR signed char ITKFoundationCommon_EXPORT One = 1;
 
   static ITK_CONSTEXPR_FUNC signed char min() { return -128; }
   static ITK_CONSTEXPR_FUNC signed char max() { return 127; }
@@ -407,7 +407,7 @@ public:
 /** \class NumericTraits<unsigned char>
  * \brief Define traits for type unsigned char.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< unsigned char > :public std::numeric_limits< unsigned char >
@@ -422,8 +422,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR unsigned char ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR unsigned char ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR unsigned char ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR unsigned char ITKFoundationCommon_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
 
@@ -460,7 +460,7 @@ public:
 
 /** \class NumericTraits<short>
  * \brief Define traits for type short.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< short > :public std::numeric_limits< short >
@@ -475,8 +475,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR short ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR short ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR short ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR short ITKFoundationCommon_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC short NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -513,7 +513,7 @@ public:
 /** \class NumericTraits<unsigned short>
  * \brief Define traits for type unsigned short.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< unsigned short > :public std::numeric_limits< unsigned short >
@@ -528,8 +528,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR unsigned short ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR unsigned short ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR unsigned short ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR unsigned short ITKFoundationCommon_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC unsigned short NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -565,7 +565,7 @@ public:
 
 /** \class NumericTraits<int>
  * \brief Define traits for type int.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< int > :public std::numeric_limits< int >
@@ -580,8 +580,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR int ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR int ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR int ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR int ITKFoundationCommon_EXPORT One = 1;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC int NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -618,7 +618,7 @@ public:
 /** \class NumericTraits<unsigned int>
  * \brief Define traits for type unsigned int.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< unsigned int > :public std::numeric_limits< unsigned int >
@@ -633,8 +633,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR unsigned int ITKCommon_EXPORT Zero = 0;
-  static ITK_CONSTEXPR_VAR unsigned int ITKCommon_EXPORT One = 1;
+  static ITK_CONSTEXPR_VAR unsigned int ITKFoundationCommon_EXPORT Zero = 0;
+  static ITK_CONSTEXPR_VAR unsigned int ITKFoundationCommon_EXPORT One = 1;
 
   static ITK_CONSTEXPR_FUNC unsigned int min(void) { return 0; }
   static ITK_CONSTEXPR_FUNC unsigned int max(void) { return static_cast< unsigned int >( -1 ); }
@@ -674,7 +674,7 @@ public:
 /** \class NumericTraits<long>
  * \brief Define traits for type long.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< long > :public std::numeric_limits< long >
@@ -689,8 +689,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR long ITKCommon_EXPORT Zero = 0L;
-  static ITK_CONSTEXPR_VAR long ITKCommon_EXPORT One = 1L;
+  static ITK_CONSTEXPR_VAR long ITKFoundationCommon_EXPORT Zero = 0L;
+  static ITK_CONSTEXPR_VAR long ITKFoundationCommon_EXPORT One = 1L;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC long NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -727,7 +727,7 @@ public:
 /** \class NumericTraits<unsigned long>
  * \brief Define traits for type unsigned long.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< unsigned long > :public std::numeric_limits< unsigned long >
@@ -742,8 +742,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR unsigned long ITKCommon_EXPORT Zero = 0UL;
-  static ITK_CONSTEXPR_VAR unsigned long ITKCommon_EXPORT One = 1UL;
+  static ITK_CONSTEXPR_VAR unsigned long ITKFoundationCommon_EXPORT Zero = 0UL;
+  static ITK_CONSTEXPR_VAR unsigned long ITKFoundationCommon_EXPORT One = 1UL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC unsigned long NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -780,7 +780,7 @@ public:
 /** \class NumericTraits<float>
  * \brief Define traits for type float.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< float > :public std::numeric_limits< float >
@@ -796,8 +796,8 @@ public:
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
 
-  static ITK_CONSTEXPR_VAR float ITKCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0f);
-  static ITK_CONSTEXPR_VAR float ITKCommon_EXPORT One itkNUMERIC_TRAITS_C11_ASSINMENT(1.0f);
+  static ITK_CONSTEXPR_VAR float ITKFoundationCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0f);
+  static ITK_CONSTEXPR_VAR float ITKFoundationCommon_EXPORT One itkNUMERIC_TRAITS_C11_ASSINMENT(1.0f);
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC float NonpositiveMin() { return -std::numeric_limits< ValueType >::max(); }
@@ -834,7 +834,7 @@ public:
 /** \class NumericTraits<double>
  * \brief Define traits for type double.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< double > :public std::numeric_limits< double >
@@ -849,8 +849,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR double ITKCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0);
-  static ITK_CONSTEXPR_VAR double ITKCommon_EXPORT One  itkNUMERIC_TRAITS_C11_ASSINMENT(1.0);
+  static ITK_CONSTEXPR_VAR double ITKFoundationCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0);
+  static ITK_CONSTEXPR_VAR double ITKFoundationCommon_EXPORT One  itkNUMERIC_TRAITS_C11_ASSINMENT(1.0);
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC double NonpositiveMin() { return -std::numeric_limits< ValueType >::max(); }
@@ -887,7 +887,7 @@ public:
 /** \class NumericTraits<long double>
  * \brief Define traits for type long double.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< long double > :public std::numeric_limits< long double >
@@ -910,8 +910,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR long double ITKCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0);
-  static ITK_CONSTEXPR_VAR long double ITKCommon_EXPORT One itkNUMERIC_TRAITS_C11_ASSINMENT(1.0);
+  static ITK_CONSTEXPR_VAR long double ITKFoundationCommon_EXPORT Zero itkNUMERIC_TRAITS_C11_ASSINMENT(0.0);
+  static ITK_CONSTEXPR_VAR long double ITKFoundationCommon_EXPORT One itkNUMERIC_TRAITS_C11_ASSINMENT(1.0);
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC long double NonpositiveMin() { return -std::numeric_limits< ValueType >::max(); }
@@ -949,7 +949,7 @@ public:
 /** \class NumericTraits<long long>
  * \brief Define traits for type long long.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< long long > :
@@ -965,8 +965,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR ValueType ITKCommon_EXPORT Zero = 0LL;
-  static ITK_CONSTEXPR_VAR ValueType ITKCommon_EXPORT One = 1LL;
+  static ITK_CONSTEXPR_VAR ValueType ITKFoundationCommon_EXPORT Zero = 0LL;
+  static ITK_CONSTEXPR_VAR ValueType ITKFoundationCommon_EXPORT One = 1LL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC ValueType NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -1003,7 +1003,7 @@ public:
 /** \class NumericTraits<unsigned long long>
  * \brief Define traits for type unsigned long long.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< unsigned long long > :
@@ -1019,8 +1019,8 @@ public:
   typedef float                    FloatType;
   typedef FixedArray<ValueType, 1> MeasurementVectorType;
 
-  static ITK_CONSTEXPR_VAR ValueType ITKCommon_EXPORT Zero = 0ULL;
-  static ITK_CONSTEXPR_VAR ValueType ITKCommon_EXPORT One = 1ULL;
+  static ITK_CONSTEXPR_VAR ValueType ITKFoundationCommon_EXPORT Zero = 0ULL;
+  static ITK_CONSTEXPR_VAR ValueType ITKFoundationCommon_EXPORT One = 1ULL;
 
   itkNUMERIC_TRAITS_MIN_MAX_MACRO();
   static ITK_CONSTEXPR_FUNC ValueType NonpositiveMin() { return std::numeric_limits< ValueType >::min(); }
@@ -1058,7 +1058,7 @@ public:
 /** \class NumericTraits< std::complex<char> >
  * \brief Define traits for type std::complex<char>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< char > >
@@ -1076,8 +1076,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<char, 2>    MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1127,7 +1127,7 @@ public:
 /** \class NumericTraits< std::complex<unsigned char> >
  * \brief Define traits for type std::complex<unsigned char>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< unsigned char > >
@@ -1145,8 +1145,8 @@ public:
   typedef std::complex< float >        FloatType;
   typedef FixedArray<unsigned char, 2> MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1190,7 +1190,7 @@ public:
 /** \class NumericTraits< std::complex<short> >
  * \brief Define traits for type std::complex<short>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< short > >
@@ -1208,8 +1208,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<short, 2>   MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1253,7 +1253,7 @@ public:
 /** \class NumericTraits< std::complex<unsigned short> >
  * \brief Define traits for type std::complex<unsigned short>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< unsigned short > >
@@ -1271,8 +1271,8 @@ public:
   typedef std::complex< float >           FloatType;
   typedef FixedArray<unsigned short, 2>   MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1316,7 +1316,7 @@ public:
 /** \class NumericTraits< std::complex<int> >
  * \brief Define traits for type std::complex<int>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< int > >
@@ -1334,8 +1334,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<int, 2>     MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1379,7 +1379,7 @@ public:
 /** \class NumericTraits< std::complex<unsigned int> >
  * \brief Define traits for type std::complex<unsigned int>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< unsigned int > >
@@ -1397,8 +1397,8 @@ public:
   typedef std::complex< float >         FloatType;
   typedef FixedArray<unsigned int, 2>   MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1442,7 +1442,7 @@ public:
 /** \class NumericTraits< std::complex<long> >
  * \brief Define traits for type std::complex<long>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< long > >
@@ -1460,8 +1460,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<long, 2>    MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1505,7 +1505,7 @@ public:
 /** \class NumericTraits< std::complex<unsigned long> >
  * \brief Define traits for type std::complex<unsigned long>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< unsigned long > >
@@ -1523,8 +1523,8 @@ public:
   typedef std::complex< float >          FloatType;
   typedef FixedArray<unsigned long, 2>   MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1568,7 +1568,7 @@ public:
 /** \class NumericTraits< std::complex<float> >
  * \brief Define traits for type std::complex<float>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< float > >
@@ -1586,8 +1586,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<float, 2>   MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< Self >::min(); }
   static Self max() { return std::numeric_limits< Self >::max(); }
@@ -1631,7 +1631,7 @@ public:
 /** \class NumericTraits< std::complex<double> >
  * \brief Define traits for type std::complex<double>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< double > >
@@ -1649,8 +1649,8 @@ public:
   typedef std::complex< float >  FloatType;
   typedef FixedArray<double, 2>  MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< ValueType >::min(); }
   static Self max() { return std::numeric_limits< ValueType >::max(); }
@@ -1694,7 +1694,7 @@ public:
 /** \class NumericTraits< std::complex<long double> >
  * \brief Define traits for type std::complex<long double>.
  * \ingroup DataRepresentation
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< >
 class NumericTraits< std::complex< long double > >
@@ -1712,8 +1712,8 @@ public:
   typedef std::complex< float >       FloatType;
   typedef FixedArray<long double, 2>  MeasurementVectorType;
 
-  static const Self ITKCommon_EXPORT Zero;
-  static const Self ITKCommon_EXPORT One;
+  static const Self ITKFoundationCommon_EXPORT Zero;
+  static const Self ITKFoundationCommon_EXPORT One;
 
   static Self min() { return std::numeric_limits< ValueType >::min(); }
   static Self max() { return std::numeric_limits< ValueType >::max(); }

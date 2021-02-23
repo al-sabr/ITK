@@ -35,9 +35,9 @@ namespace itk
  * classes, is designed to provide a mechanism for storing a collection of
  * arbitrary data types. The main motivation for such a collection is to
  * associate arbitrary data elements with itk DataObjects.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT MetaDataDictionary
+class ITKFoundationCommon_EXPORT MetaDataDictionary
 {
 public:
   typedef MetaDataDictionary Self;

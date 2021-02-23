@@ -38,7 +38,7 @@ namespace itk
  *
  * \ingroup ITKSystemObjects
  * \ingroup DataAccess
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename TObjectType >
 class SmartPointer

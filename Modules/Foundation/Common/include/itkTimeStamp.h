@@ -54,9 +54,9 @@ namespace itk
  * for more detail).
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT TimeStamp
+class ITKFoundationCommon_EXPORT TimeStamp
 {
 public:
   /** Standard class typedefs. */

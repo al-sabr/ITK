@@ -26,9 +26,9 @@ namespace itk
  *  \brief Define API for object creation callback functions.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
-class ITKCommon_EXPORT CreateObjectFunctionBase:public Object
+class ITKFoundationCommon_EXPORT CreateObjectFunctionBase:public Object
 {
 public:
   /** Standard typedefs. */
@@ -54,7 +54,7 @@ private:
  *        use with the itk::ObjectFactory.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< typename T >
 class CreateObjectFunction:public CreateObjectFunctionBase

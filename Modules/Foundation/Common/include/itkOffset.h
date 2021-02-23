@@ -45,7 +45,7 @@ class ITK_TEMPLATE_EXPORT OffsetLexicographicCompare;
  *
  * \sa Index
  * \ingroup ImageAccess
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  *
  * \wiki
  * \wikiexample{SimpleOperations/Offset,Add an offset to a pixel index}
@@ -225,7 +225,7 @@ namespace Functor
  * This is a comparison functor suitable for storing Offset instances
  * in an STL container.  The ordering is total and unique but has
  * little geometric meaning.
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 template< unsigned int VOffsetDimension >
 class ITK_TEMPLATE_EXPORT OffsetLexicographicCompare

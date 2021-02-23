@@ -47,10 +47,10 @@ namespace itk
  * window is created the next time text is written to the window.
  *
  * \ingroup OSSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT Win32OutputWindow:public OutputWindow
+class ITKFoundationCommon_EXPORT Win32OutputWindow:public OutputWindow
 {
 public:
   /** Standard class typedefs. */

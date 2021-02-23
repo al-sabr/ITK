@@ -181,9 +181,9 @@ ThreadPool
 ::~ThreadPool()
 {
   bool waitForThreads = true;
-#if defined(WIN32) && defined(ITKCommon_EXPORTS)
+#if defined(WIN32) && defined(ITKFoundationCommon_EXPORTS)
   //this destructor is called during DllMain's DLL_PROCESS_DETACH.
-  //Because ITKCommon-4.X.dll is usually being detached due to process termination,
+  //Because ITKFoundationCommon-4.X.dll is usually being detached due to process termination,
   //lpvReserved is non-NULL meaning that "all threads in the process
   //except the current thread either have exited already or have been
   //explicitly terminated by a call to the ExitProcess function".

@@ -39,10 +39,10 @@ namespace itk
  * \sa RealTimeInterval
  * \sa RealTimeClock
  *
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
-class ITKCommon_EXPORT RealTimeStamp
+class ITKFoundationCommon_EXPORT RealTimeStamp
 {
 public:
 
@@ -83,7 +83,7 @@ public:
   bool operator>=( const Self & ) const;
 
   /** Default print out of a RealTimeStamp */
-  friend ITKCommon_EXPORT std::ostream & operator<<(std::ostream & os, const RealTimeStamp & v);
+  friend ITKFoundationCommon_EXPORT std::ostream & operator<<(std::ostream & os, const RealTimeStamp & v);
 
 private:
 

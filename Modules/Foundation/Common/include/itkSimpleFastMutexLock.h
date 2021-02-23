@@ -42,11 +42,11 @@ namespace itk
  * allocated on the stack.
  *
  * \ingroup OSSystemObjects
- * \ingroup ITKCommon
+ * \ingroup ITKFoundationCommon
  */
 
 // Critical Section object that is not a itkObject.
-class ITKCommon_EXPORT SimpleFastMutexLock
+class ITKFoundationCommon_EXPORT SimpleFastMutexLock
 {
 public:
   /** Standard class typedefs.  */
