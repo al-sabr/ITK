@@ -150,10 +150,10 @@ configure_file(src/itkConfigure.h.in itkConfigure.h)
 configure_file(src/itkConfigurePrivate.h.in itkConfigurePrivate.h)
 
 
-set(ITKInternal_INCLUDE_DIRS
-  ${ITKInternal_BINARY_DIR}
+set(ITKFoundationCommon_INCLUDE_DIRS
+  ${ITKFoundationCommon_BINARY_DIR}
   )
-set(ITKInternal_LIBRARIES ITKInternal)
+set(ITKFoundationCommon_LIBRARIES ITKFoundationCommon)
 
 set(BACKUP ${ITK_SOURCE_DIR})
 
@@ -192,14 +192,14 @@ target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURR
 include(CMake/itkGenerateNewCompilerFeatureDetectionHeaders.cmake)
 
 install(FILES
-  ${ITKInternal_BINARY_DIR}/itkConfigure.h
+  ${ITKFoundationCommon_BINARY_DIR}/itkConfigure.h
   ${CMAKE_CURRENT_BINARY_DIR}/itk_compiler_detection.h
-  DESTINATION ${ITKInternal_INSTALL_INCLUDE_DIR}
+  DESTINATION ${ITKFoundationCommon_INSTALL_INCLUDE_DIR}
   COMPONENT Development
 )
 
 install(FILES
   ${ITK_compiler_detection_support_headers}
-  DESTINATION ${ITKInternal_INSTALL_INCLUDE_DIR}/compilers
+  DESTINATION ${ITKFoundationCommon_INSTALL_INCLUDE_DIR}/compilers
   COMPONENT Development
 )
