@@ -1,7 +1,5 @@
 project(ITKFoundationCommon)
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMake ${CMAKE_MODULE_PATH})
-
 # Version string should not include patch level.  The major.minor is
 # enough to distinguish available features of the toolkit.
 set(ITK_VERSION_STRING "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}")
@@ -15,21 +13,17 @@ set(ITK_USE_PTHREADS 0)
 set(ITK_HP_PTHREADS 0)
 if(CMAKE_USE_WIN32_THREADS_INIT)
   set(ITK_USE_WIN32_THREADS 1)
-elseif(CMAKE_USE_PTHREADS_INIT AND NOT EMSCRIPTEN)
+elseif(CMAKE_USE_PTHREADS_INIT)
   set(ITK_USE_PTHREADS 1)
 elseif(CMAKE_HP_PTHREADS_INIT)
   set(ITK_HP_PTHREADS 1)
 endif()
 set(CMAKE_THREAD_LIBS "${CMAKE_THREAD_LIBS_INIT}" CACHE STRING "Thread library used.")
 mark_as_advanced(CMAKE_THREAD_LIBS)
-set(ITK_DEFAULT_MAX_THREADS 128 CACHE STRING "The maximum number of threads allowed. Default: 128")
-mark_as_advanced(ITK_DEFAULT_MAX_THREADS)
 
-set(ITK_DEFAULT_THREADER "Auto" CACHE STRING "Default multithreader.")
-mark_as_advanced(ITK_DEFAULT_THREADER)
-set_property(CACHE ITK_DEFAULT_THREADER PROPERTY STRINGS Auto TBB Pool Platform)
-
+#
 # See if compiler preprocessor has the __FUNCTION__ directive used by itkExceptionMacro
+#
 include(CheckCPPDirective)
 check_cpp_directive_exists(__FUNCTION__ ITK_CPP_FUNCTION)
 
@@ -39,10 +33,19 @@ include(CheckIncludeFiles)
 check_include_files(fenv.h HAVE_FENV_H)
 # check if the platform has some widely used header files
 check_include_files("unistd.h" HAVE_UNISTD_H)
+# check if the platform has the header file "stdint.h" which has been added as part of the C99 standard
+check_include_files("stdint.h" HAVE_STDINT_H)
+# every system should have this header
+check_include_files("stddef.h" HAVE_STDDEF_H)
+check_include_files("sys/types.h" HAVE_SYS_TYPES_H)
 
 
 # Check if this platform support the sse2 rounding functions for 32 and 64 bits
 include(CheckSupportForSSERounding)
+
+
+# Test for atomics and other compiler intrinsics
+include(itkCheckBuiltins)
 
 
 # Check for atomic functions
@@ -58,7 +61,7 @@ endif()
 # Identify the version of CXX compiler used when ITK was built. This needs to be
 # identified so that external applications can identify how ITK was built.
 set(ITK_COMPILED_CXX_STANDARD_VERSION 1)
-foreach(CXX_TEST_VERSION 201103L 201402L 201703L)
+foreach(CXX_TEST_VERSION 199711L 201103L 201402L)
   try_compile(ITK_MIN_CXX_LEVEL_TEST
     ${CMAKE_CURRENT_BINARY_DIR}/CMakeTmp
     ${CMAKE_CURRENT_LIST_DIR}/CMake/itkGetCXXCompilerVersion.cxx
@@ -71,6 +74,17 @@ foreach(CXX_TEST_VERSION 201103L 201402L 201703L)
      set(ITK_COMPILED_CXX_STANDARD_VERSION ${CXX_TEST_VERSION})
   endif()
 endforeach()
+
+# check of the optional TR1 type_traits, alternative boost
+# implementation could also be searched for
+include(CheckIncludeFileCXX)
+check_include_file_cxx( tr1/type_traits ITK_HAS_STLTR1_TR1_TYPE_TRAITS )
+check_include_file_cxx( type_traits ITK_HAS_STLTR1_TYPE_TRAITS )
+
+# Check for C++11 type_traits
+try_compile( ITK_HAS_CPP11_TYPETRAITS
+  ${ITK_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckCxx11StlTypeTraits.cxx )
 
 try_compile( ITK_HAS_GNU_ATTRIBUTE_ALIGNED
   ${ITK_BINARY_DIR}
@@ -89,34 +103,6 @@ try_compile(ITK_HAS_FEENABLEEXCEPT
   ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFeenableexcept.cxx
   )
 
-try_compile(ITK_HAS_FEGETENV
-  ${ITK_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFegetenv.cxx
-  )
-
-try_compile(ITK_HAS_FESETENV
-  ${ITK_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFesetenv.cxx
-  )
-
-try_compile(ITK_HAS_STRUCT_FENV_T_CONTROL
-  ${ITK_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFenvtStructMember.cxx
-  COMPILE_DEFINITIONS -DITK_CHECK_FENV_T_CONTROL
-  )
-
-try_compile(ITK_HAS_STRUCT_FENV_T_CONTROL_WORD
-  ${ITK_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFenvtStructMember.cxx
-  COMPILE_DEFINITIONS -DITK_CHECK_FENV_T_CONTROL_WORD
-  )
-
-try_compile(ITK_HAS_STRUCT_FENV_T_CW
-  ${ITK_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/itkCheckHasFenvtStructMember.cxx
-  COMPILE_DEFINITIONS -DITK_CHECK_FENV_T_CW
-  )
-
 #-----------------------------------------------------------------------------
 # Make default visibility as an option for generated export header
 
@@ -126,10 +112,7 @@ include(itkCheckPrivateDynamicCast)
 
 
 set(_template_visibility_init OFF)
-if(NOT ITK_PRIVATE_DYNAMIC_CAST
-    AND NOT (CMAKE_CXX_VISIBILITY_PRESET STREQUAL "hidden"
-             AND NOT BUILD_SHARED_LIBS)
-  )
+if(NOT ITK_PRIVATE_DYNAMIC_CAST)
   set(_template_visibility_init ON)
 endif()
 # This adds default symbol visibility to template class types, which
@@ -141,13 +124,8 @@ endif()
 option(ITK_TEMPLATE_VISIBILITY_DEFAULT "Set symbol visibility to default for template class declarations. https://itk.org/Wiki/ITK/FAQ" "${_template_visibility_init}")
 mark_as_advanced(ITK_TEMPLATE_VISIBILITY_DEFAULT)
 
-# Configuration variable is named ITK_USE_TBB instead of simply using the
-# TBB module name (Module_ITKTBB) for code readability.
-set(ITK_USE_TBB ${Module_ITKTBB})
-
 
 configure_file(src/itkConfigure.h.in itkConfigure.h)
-configure_file(src/itkConfigurePrivate.h.in itkConfigurePrivate.h)
 
 
 set(ITKFoundationCommon_INCLUDE_DIRS
