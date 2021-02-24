@@ -29,6 +29,7 @@
 #define itkOutputWindow_h
 
 #include "itkObject.h"
+#include "ITKFoundationCommonExport.h"
 
 namespace itk
 {
