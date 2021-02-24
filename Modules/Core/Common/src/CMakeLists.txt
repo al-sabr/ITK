@@ -1,15 +1,12 @@
 set(ITKCommon_SRCS
   itkMemoryProbesCollectorBase.cxx
-  itkCreateObjectFunction.cxx
   itkLogger.cxx
   itkLogOutput.cxx
   itkLoggerOutput.cxx
   itkProgressAccumulator.cxx
-  itkMutexLock.cxx
   itkHexahedronCellTopology.cxx
   itkFileOutputWindow.cxx
   itkSimpleFilterWatcher.cxx
-  itkObject.cxx
   itkQuadrilateralCellTopology.cxx
   itkIterationReporter.cxx
   itkMemoryProbe.cxx
@@ -20,25 +17,19 @@ set(ITKCommon_SRCS
   itkBarrier.cxx
   itkSpatialOrientationAdapter.cxx
   itkOctreeNode.cxx
-  itkMultiThreader.cxx
-  itkMetaDataObject.cxx
   itkThreadLogger.cxx
   itkNumericTraitsTensorPixel.cxx
   itkStdStreamLogOutput.cxx
   itkLightProcessObject.cxx
-  itkRegion.cxx
   itkImageSourceCommon.cxx
   itkImageToImageFilterCommon.cxx
   itkImageRegionSplitterDirection.cxx
   itkImageRegionSplitterMultidimensional.cxx
-  itkFastMutexLock.cxx
   itkNumericTraitsRGBAPixel.cxx
   itkRealTimeClock.cxx
-  itkCovariantVector.cxx
   itkMemoryUsageObserver.cxx
   itkMersenneTwisterRandomVariateGenerator.cxx
   itkLoggerBase.cxx
-  itkNumericTraitsCovariantVectorPixel.cxx
   itkMultipleLogOutput.cxx
   itkQuadraticTriangleCellTopology.cxx
   itkTimeProbesCollectorBase.cxx
@@ -55,12 +46,9 @@ set(ITKCommon_SRCS
   itkXMLFileOutputWindow.cxx
   itkXMLFilterWatcher.cxx
   itkStoppingCriterionBase.cxx
-  itkCompensatedSummation.cxx
   itkArrayOutputSpecialization.cxx
   itkNumberToString.cxx
-  itkSmartPointerForwardReferenceProcessObject.cxx
   itkRandomVariateGeneratorBase.cxx
-  itkAtomicInt.cxx
   )
 
 ### generating libraries
