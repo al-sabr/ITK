@@ -50,7 +50,7 @@ namespace itk
  * This can be use to overide the creation of any object in ITK.
  *
  * \ingroup ITKSystemObjects
- * \ingroup ITKFoundationCommon
+ * \ingroup ITKCommon
  */
 
 // Forward reference because of private implementation
@@ -188,7 +188,7 @@ public:
 
   /** \class OverrideInformation
    * \brief Internal implementation class for ObjectFactorBase.
-   * \ingroup ITKFoundationCommon
+   * \ingroup ITKCommon
    */
   struct OverrideInformation {
     std::string m_Description;
