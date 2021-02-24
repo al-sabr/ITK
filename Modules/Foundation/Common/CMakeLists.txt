@@ -135,7 +135,7 @@ set(ITKFoundationCommon_INCLUDE_DIRS
   )
 set(ITKFoundationCommon_LIBRARIES ITKFoundationCommon)
 
-itk_module_impl(BYPASS_OWNERSHIP GENERATE_EXPORTS_MODULE_ROOT)
+itk_module_impl(BYPASS_OWNERSHIP ) # GENERATE_EXPORTS_MODULE_ROOT
 
 install(FILES
   ${ITKFoundationCommon_BINARY_DIR}/itkConfigure.h
