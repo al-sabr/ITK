@@ -4,6 +4,8 @@ module compilation.")
 
 itk_module(ITKFoundationCommon
   ENABLE_SHARED
+  DEPENDS
+    ITKKWIML
   PRIVATE_DEPENDS
     ITKDoubleConversion
   COMPILE_DEPENDS
