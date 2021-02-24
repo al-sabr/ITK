@@ -31,6 +31,7 @@
 #include "itkLightObject.h"
 #include "itkEventObject.h"
 #include "itkMetaDataDictionary.h"
+#include "ITKFoundationCommonExport.h"
 
 namespace itk
 {
