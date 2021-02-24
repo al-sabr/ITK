@@ -1,5 +1,7 @@
 project(ITKFoundationCommon)
 
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMake ${CMAKE_MODULE_PATH})
+
 # Version string should not include patch level.  The major.minor is
 # enough to distinguish available features of the toolkit.
 set(ITK_VERSION_STRING "${ITK_VERSION_MAJOR}.${ITK_VERSION_MINOR}")
@@ -133,51 +135,16 @@ set(ITKFoundationCommon_INCLUDE_DIRS
   )
 set(ITKFoundationCommon_LIBRARIES ITKFoundationCommon)
 
-set(BACKUP ${ITK_SOURCE_DIR})
-
 itk_module_impl(BYPASS_OWNERSHIP GENERATE_EXPORTS_MODULE_ROOT)
-#[[
-unset(ITK_SOURCE_DIR PARENT_SCOPE)
 
-
-
-
-set(ITK_SOURCE_DIR ${BACKUP} PARENT_SCOPE)
-unset(BACKUP)
-
-set(exports "${${PROJECT_NAME}_BINARY_DIR}/${PROJECT_NAME}Export.h")
-
-# Generate the export macro header for symbol visibility/Windows DLL declspec
-generate_export_header(${itk-module}
-  EXPORT_FILE_NAME ${exports}
-  EXPORT_MACRO_NAME ${itk-module}_EXPORT
-  NO_EXPORT_MACRO_NAME ${itk-module}_HIDDEN
-  STATIC_DEFINE ITK_STATIC )
-  install(FILES
-  ${exports}
-  DESTINATION ${${itk-module}_INSTALL_INCLUDE_DIR}
+install(FILES
+  ${ITKFoundationCommon_BINARY_DIR}/itkConfigure.h
+  DESTINATION ${ITKFoundationCommon_INSTALL_INCLUDE_DIR}
   COMPONENT Development
-)
+  )
 
-message("ARGHHH = ${exports}")
-target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
-
-]]
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
 # identified in a way consistent with CMake 3.1.0 and
 # greater
 include(CMake/itkGenerateNewCompilerFeatureDetectionHeaders.cmake)
-
-install(FILES
-  ${ITKFoundationCommon_BINARY_DIR}/itkConfigure.h
-  ${CMAKE_CURRENT_BINARY_DIR}/itk_compiler_detection.h
-  DESTINATION ${ITKFoundationCommon_INSTALL_INCLUDE_DIR}
-  COMPONENT Development
-)
-
-install(FILES
-  ${ITK_compiler_detection_support_headers}
-  DESTINATION ${ITKFoundationCommon_INSTALL_INCLUDE_DIR}/compilers
-  COMPONENT Development
-)

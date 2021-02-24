@@ -1,0 +1,3 @@
+project(ITKFoundationTransform)
+set(ITKFoundationTransform_LIBRARIES ITKFoundationTransform)
+itk_module_impl(BYPASS_OWNERSHIP GENERATE_EXPORTS_MODULE_ROOT)
