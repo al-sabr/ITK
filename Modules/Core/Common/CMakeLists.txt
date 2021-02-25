@@ -9,11 +9,12 @@ set(ITKCommon_LIBRARIES ITKCommon)
 
 itk_module_impl()
 
-#install(FILES
+#[[install(FILES
   ${ITKCommon_BINARY_DIR}/itkConfigure.h
   DESTINATION ${ITKCommon_INSTALL_INCLUDE_DIR}
   COMPONENT Development
   )
+  ]]
 
 # configure and install compiler feature header files
 # that have fine granular support of C++11 features
