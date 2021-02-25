@@ -196,7 +196,6 @@ macro(itk_module_impl)
   endif()
 
   if(BYPASS_OWNERSHIP AND GENERATE_EXPORTS_MODULE_ROOT)
-		message("ADDED BYPASS_OWNERSHIP AND GENERATE_EXPORTS_MODULE_ROOT")
 		list(APPEND ${itk-module}_INCLUDE_DIRS ${${itk-module}_BINARY_DIR})
 	endif()
 
