@@ -40,7 +40,6 @@
 
 #include "itkWin32Header.h"
 #include "itkConfigure.h"
-#include "ITKFoundationCommonExport.h"
 
 #include <typeinfo>
 

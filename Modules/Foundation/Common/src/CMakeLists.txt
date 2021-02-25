@@ -44,7 +44,11 @@ set(ITKFoundationCommon_SRC
   )
 
 ### generating libraries
-itk_module_add_library( ITKFoundationCommon ${ITKFoundationCommon_SRC})
+#itk_module_add_library( ITKFoundationCommon ${ITKFoundationCommon_SRC})
+
+add_library(ITKFoundationCommon ${ITKFoundationCommon_SRC})
+itk_module_link_dependencies()
+itk_module_target(ITKFoundationCommon)
 
 target_link_libraries(ITKFoundationCommon LINK_PUBLIC itksys ITKVNLInstantiation)
 

@@ -30,7 +30,7 @@
 #include "itkObjectFactory.h"
 #include "itkSimpleFastMutexLock.h"
 #include "itkMutexLockHolder.h"
-#include "ITKFoundationCommonExport.h"
+
 namespace itk
 {
 

@@ -18,7 +18,6 @@
 #ifndef itkImageSourceCommon_h
 #define itkImageSourceCommon_h
 
-#include "ITKFoundationCommonExport.h"
 #include "itkImageRegionSplitterBase.h"
 
 namespace itk

@@ -31,7 +31,6 @@
 #include "itkCreateObjectFunction.h"
 #include <list>
 #include <vector>
-#include "ITKFoundationCommonExport.h"
 
 namespace itk
 {
