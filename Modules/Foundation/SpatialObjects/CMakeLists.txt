@@ -1,3 +1,3 @@
 project(ITKFoundationSpatialObjects)
 set(ITKFoundationSpatialObjects_LIBRARIES ITKFoundationSpatialObjects)
-itk_module_impl(BYPASS_OWNERSHIP GENERATE_EXPORTS_MODULE_ROOT)
+itk_module_impl()

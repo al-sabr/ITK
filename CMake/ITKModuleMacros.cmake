@@ -188,11 +188,17 @@ macro(itk_module_impl)
     list(APPEND ${itk-module}_INCLUDE_DIRS ${${itk-module}_SOURCE_DIR}/include)
     install(DIRECTORY include/ DESTINATION ${${itk-module}_INSTALL_INCLUDE_DIR} COMPONENT Development)
   endif()
+
   if(NOT ITK_SOURCE_DIR AND ${itk-module}_ENABLE_SHARED)
     # When building a module outside the ITK source tree, if ENABLE_SHARED is enabled,
     # find the export header.
     list(APPEND ${itk-module}_INCLUDE_DIRS ${${itk-module}_BINARY_DIR}/include)
   endif()
+
+  if(BYPASS_OWNERSHIP AND GENERATE_EXPORTS_MODULE_ROOT)
+		message("ADDED BYPASS_OWNERSHIP AND GENERATE_EXPORTS_MODULE_ROOT")
+		list(APPEND ${itk-module}_INCLUDE_DIRS ${${itk-module}_BINARY_DIR})
+	endif()
 
   if(${itk-module}_INCLUDE_DIRS)
     include_directories(${${itk-module}_INCLUDE_DIRS})
