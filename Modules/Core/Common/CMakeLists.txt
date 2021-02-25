@@ -1,6 +1,6 @@
 project(ITKCommon)
 
-#configure_file(src/itkConfigure.h.in itkConfigure.h)
+configure_file(src/itkConfigure.h.in itkConfigure.h)
 
 set(ITKCommon_INCLUDE_DIRS
   ${ITKCommon_BINARY_DIR}

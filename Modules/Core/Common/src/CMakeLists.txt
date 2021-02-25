@@ -21,7 +21,6 @@ set(ITKCommon_SRCS
   itkNumericTraitsTensorPixel.cxx
   itkStdStreamLogOutput.cxx
   itkLightProcessObject.cxx
-  itkImageSourceCommon.cxx
   itkImageToImageFilterCommon.cxx
   itkImageRegionSplitterDirection.cxx
   itkImageRegionSplitterMultidimensional.cxx

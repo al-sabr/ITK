@@ -272,7 +272,7 @@ macro(itk_module_impl)
 
   set(itk-module-EXPORT_CODE-build "${${itk-module}_EXPORT_CODE_BUILD}")
   set(itk-module-EXPORT_CODE-install "${${itk-module}_EXPORT_CODE_INSTALL}")
-  if(ITK_SOURCE_DIR AND NOT DEFINED BYPASS_OWNERSHIP)
+  if(ITK_SOURCE_DIR)
     # Uses ITKTargets.cmake
     set(itk-module-TARGETS_FILE-build "")
     set(itk-module-TARGETS_FILE-install "")
