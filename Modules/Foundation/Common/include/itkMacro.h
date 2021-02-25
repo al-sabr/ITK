@@ -38,6 +38,7 @@
 #ifndef itkMacro_h
 #define itkMacro_h
 
+#include "ITKFoundationCommonExport.h"
 #include "itkWin32Header.h"
 #include "itkConfigure.h"
 
