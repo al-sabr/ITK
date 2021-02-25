@@ -11,6 +11,7 @@ itk_module(ITKCommon
   DEPENDS
     ITKKWIML
   PRIVATE_DEPENDS
+    ITKFoundationCommon
     ITKDoubleConversion
   COMPILE_DEPENDS
     ITKKWSys
